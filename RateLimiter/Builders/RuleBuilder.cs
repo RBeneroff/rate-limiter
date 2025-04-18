@@ -34,7 +34,7 @@ namespace RateLimiter.Builders
         public static IRateLimitRule CreateRegionRules()
         {
             // set region rules
-            var usRule = new FixedWindowRule(10, TimeSpan.FromMinutes(1));
+            var usRule = new FixedWindowRule(5, TimeSpan.FromMinutes(1));
             var euRule = new TokenBucketRule(3, 3/60.0);
 
             // create region mapping
